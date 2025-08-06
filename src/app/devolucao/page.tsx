@@ -338,14 +338,14 @@ export default function Devolucao() {
         />
       </Head>
 
-      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-green-50 to-emerald-50">
+      <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
         {/* Header Moderno */}
         <header className="bg-white/80 backdrop-blur-md border-b border-gray-200 sticky top-0 z-50">
           <div className="container mx-auto px-6 py-4">
             <div className="flex items-center justify-between">
               <div className="flex items-center space-x-4">
                 <div className="relative">
-                  <div className="bg-gradient-to-r from-green-500 to-emerald-600 p-2 rounded-xl shadow-lg">
+                  <div className="bg-gradient-to-r from-blue-500 to-indigo-600 p-2 rounded-xl shadow-lg">
                     <Image
                       src={ToolShopLogo}
                       alt="ToolShop Logo"
@@ -354,10 +354,10 @@ export default function Devolucao() {
                       className="rounded-lg"
                     />
                   </div>
-                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-green-500 rounded-full border-2 border-white"></div>
+                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-blue-500 rounded-full border-2 border-white"></div>
                 </div>
                 <div>
-                  <h1 className="text-2xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+                  <h1 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                     ToolShop
                   </h1>
                   <p className="text-sm text-gray-600">Sistema de Devolução</p>
@@ -368,7 +368,7 @@ export default function Devolucao() {
                 {currentUser && (
                   <div className="hidden md:flex items-center space-x-6">
                     <div className="flex items-center space-x-2 text-gray-600">
-                      <FiUser className="text-green-500" />
+                      <FiUser className="text-blue-500" />
                       <span className="text-sm font-medium">
                         {currentUser.name}
                       </span>
@@ -407,7 +407,7 @@ export default function Devolucao() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-3">
                   {arduinoConnected ? (
-                    <FiWifi className="text-green-500" size={20} />
+                    <FiWifi className="text-blue-500" size={20} />
                   ) : (
                     <FiWifiOff className="text-red-500" size={20} />
                   )}
@@ -418,7 +418,7 @@ export default function Devolucao() {
                 <div className="flex space-x-2">
                   <button
                     onClick={connectToArduino}
-                    className="px-3 py-1 bg-blue-500 text-white rounded text-sm hover:bg-blue-600"
+                    className="px-4 py-2 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-xl text-sm font-medium hover:from-blue-600 hover:to-indigo-700 transition-all duration-200"
                   >
                     Reconectar
                   </button>
@@ -431,7 +431,7 @@ export default function Devolucao() {
               {/* Área Principal - Devolução */}
               <div className="lg:col-span-2">
                 <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                  <div className="bg-green-600 p-6">
+                  <div className="bg-gradient-to-r from-blue-500 to-indigo-600 p-6">
                     <h2 className="text-2xl font-bold text-white flex items-center">
                       <FiRotateCcw className="mr-3" /> Devolução de Ferramentas
                     </h2>
@@ -492,8 +492,8 @@ export default function Devolucao() {
                     {currentStep === "scan" && currentUser && (
                       <div className="space-y-6">
                         <div className="text-center">
-                          <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto">
-                            <FiCheckCircle className="text-green-600 text-2xl" />
+                          <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto">
+                            <FiCheckCircle className="text-blue-600 text-2xl" />
                           </div>
                           <h3 className="text-xl font-semibold mt-4">
                             Bem-vindo, {currentUser.name}!
@@ -546,11 +546,11 @@ export default function Devolucao() {
                         </div>
 
                         {/* Área de Leitura */}
-                        <div className="border-2 border-dashed border-green-300 rounded-2xl p-8 bg-green-50 text-center">
+                        <div className="border-2 border-dashed border-blue-300 rounded-2xl p-8 bg-blue-50 text-center">
                           {isScanning ? (
                             <div className="flex flex-col items-center">
                               <div className="animate-pulse">
-                                <div className="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto">
+                                <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto">
                                   <FiTool className="text-white text-2xl" />
                                 </div>
                               </div>
@@ -577,7 +577,7 @@ export default function Devolucao() {
                             simulateRFIDScan();
                           }}
                           disabled={isScanning}
-                          className="w-full px-6 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 disabled:bg-gray-400"
+                          className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-lg font-medium hover:from-blue-600 hover:to-indigo-700 disabled:bg-gray-400"
                         >
                           <FiTool className="mr-2 inline" />
                           Simular Leitura de Ferramenta
@@ -708,7 +708,7 @@ export default function Devolucao() {
                         <div className="flex space-x-4">
                           <button
                             onClick={confirmReturn}
-                            className="flex-1 py-3 bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium"
+                            className="flex-1 py-3 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white rounded-lg font-medium"
                           >
                             <FiCheck className="mr-2 inline" />
                             Confirmar Devolução
@@ -792,11 +792,14 @@ export default function Devolucao() {
 
               {/* Sidebar - Status da Devolução */}
               <div className="lg:col-span-1">
-                <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-                  <div className="bg-green-600 p-6">
-                    <h2 className="text-xl font-bold text-white flex items-center">
-                      <FiRotateCcw className="mr-3" /> Status da Devolução
-                    </h2>
+                <div className="bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+                  <div className="bg-gradient-to-r from-blue-500 to-indigo-600 p-6">
+                    <div className="flex items-center justify-between">
+                      <h2 className="text-xl font-bold text-white flex items-center">
+                        <FiRotateCcw className="mr-3" /> Status da Devolução
+                      </h2>
+                      <div className="w-3 h-3 bg-blue-400 rounded-full animate-pulse"></div>
+                    </div>
                   </div>
 
                   <div className="p-6 space-y-6">
@@ -958,7 +961,7 @@ export default function Devolucao() {
           <div className="container mx-auto px-6 py-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="flex items-center space-x-4 mb-4 md:mb-0">
-                <div className="bg-gradient-to-r from-green-500 to-emerald-600 p-2 rounded-lg">
+                <div className="bg-gradient-to-r from-blue-500 to-indigo-600 p-2 rounded-lg">
                   <Image
                     src={ToolShopLogo}
                     alt="ToolShop Logo"

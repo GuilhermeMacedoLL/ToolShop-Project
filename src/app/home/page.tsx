@@ -328,7 +328,7 @@ export default function Home() {
                       </span>
                     </div>
                   </div>
-                  <Link href="/coleta" className="block">
+                  <Link href="/reporte" className="block">
                     <button
                       onClick={() => handleOperationClick("reporte")}
                       disabled={isLoading}

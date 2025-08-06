@@ -580,24 +580,6 @@ export default function Coleta() {
                               Devolver ferramentas ao estoque
                             </p>
                           </button>
-
-                          <button
-                            onClick={() => {
-                              setOperation("reporte_dano");
-                              setCurrentStep("scan");
-                              setScanMode("tool");
-                            }}
-                            className="p-8 bg-red-50 border-2 border-red-200 rounded-xl hover:bg-red-100 transition-colors md:col-span-2"
-                          >
-                            <FiAlertOctagon className="text-red-600 text-4xl mx-auto mb-4" />
-                            <h4 className="font-semibold text-red-800 text-lg">
-                              Reportar Ferramenta Danificada
-                            </h4>
-                            <p className="text-sm text-red-600 mt-2">
-                              Informar sobre ferramentas quebradas ou
-                              danificadas
-                            </p>
-                          </button>
                         </div>
                       </div>
                     )}
@@ -960,27 +942,6 @@ export default function Coleta() {
                           </p>
                         </div>
                       )}
-                    </div>
-
-                    {/* Reporte de Dano - EM VERMELHO */}
-                    <div className="bg-gradient-to-r from-red-50 to-pink-50 p-4 rounded-xl border-2 border-red-200 shadow-sm">
-                      <h3 className="font-semibold text-red-800 mb-3 flex items-center">
-                        <FiAlertOctagon className="mr-2 text-red-600" />
-                        Reporte de Dano
-                      </h3>
-                      <p className="text-sm text-red-700 mb-4">
-                        Encontrou uma ferramenta quebrada ou danificada?
-                      </p>
-                      <button
-                        onClick={() => {
-                          setOperation("reporte_dano");
-                          setCurrentStep("scan");
-                          setScanMode("tool");
-                        }}
-                        className="w-full py-3 bg-gradient-to-r from-red-500 to-pink-600 text-white rounded-xl text-sm font-semibold hover:from-red-600 hover:to-pink-700 transition-all duration-300 transform hover:scale-105"
-                      >
-                        Reportar Dano
-                      </button>
                     </div>
 
                     {/* Estatísticas Rápidas */}
